@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 20710436}
   - component: {fileID: 20710439}
-  - component: {fileID: 20710438}
   - component: {fileID: 20710437}
   m_Layer: 0
   m_Name: lower_right_arm
@@ -137,72 +136,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20710435}
-  m_LocalRotation: {x: 0.000062801875, y: 0.00061072, z: 0.031064598, w: 0.99951726}
+  m_LocalRotation: {x: -0.00008763559, y: 0.0015245767, z: 0.004348861, w: 0.99998945}
   m_LocalPosition: {x: 0.302, y: -1.036, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1549818925}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0.0050000004, y: 0.07, z: 3.5600002}
---- !u!144 &20710437
-CharacterJoint:
+  m_LocalEulerAnglesHint: {x: -0.011000001, y: 0.17500001, z: 0.49800003}
+--- !u!114 &20710437
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20710435}
-  m_ConnectedBody: {fileID: 1549818926}
-  m_Anchor: {x: 0, y: 0.051725626, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.29878798, y: -0.9843747, z: 0.000008447352}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &20710438
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 20710435}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &20710439
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -259,7 +212,6 @@ GameObject:
   - component: {fileID: 398404462}
   - component: {fileID: 398404461}
   - component: {fileID: 398404459}
-  - component: {fileID: 398404460}
   m_Layer: 0
   m_Name: upper_left_arm
   m_TagString: Untagged
@@ -267,65 +219,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &398404459
-Rigidbody:
+--- !u!114 &398404459
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398404458}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!144 &398404460
-CharacterJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 398404458}
-  m_ConnectedBody: {fileID: 730776034}
-  m_Anchor: {x: 0, y: 0.063892245, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.11594483, y: 1.6404797, z: -0.038259093}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &398404461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -395,7 +301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 455562269}
   - component: {fileID: 455562272}
-  - component: {fileID: 455562271}
   - component: {fileID: 455562270}
   m_Layer: 0
   m_Name: lower_left_leg
@@ -410,72 +315,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 455562268}
-  m_LocalRotation: {x: -0.0000002956949, y: -0.000006729503, z: -0.34506, w: 0.9385807}
+  m_LocalRotation: {x: -0.000002101995, y: -0.000006399816, z: -0.07879787, w: 0.99689066}
   m_LocalPosition: {x: -0.282, y: -1.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1874233029}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -0.001, z: -40.371002}
---- !u!144 &455562270
-CharacterJoint:
+  m_LocalEulerAnglesHint: {x: 0, y: -0.001, z: -9.0390005}
+--- !u!114 &455562270
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 455562268}
-  m_ConnectedBody: {fileID: 1874233030}
-  m_Anchor: {x: 0, y: 0.085614204, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.22654496, y: -0.98277396, z: 0.00000036236813}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &455562271
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 455562268}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &455562272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -609,7 +468,6 @@ GameObject:
   - component: {fileID: 730776037}
   - component: {fileID: 730776036}
   - component: {fileID: 730776034}
-  - component: {fileID: 730776035}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -617,65 +475,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &730776034
-Rigidbody:
+--- !u!114 &730776034
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 730776033}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!144 &730776035
-CharacterJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730776033}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 2.1526582, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.0242742, y: 1.2571166, z: 0.03378199}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &730776036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -744,6 +556,9 @@ GameObject:
   m_Component:
   - component: {fileID: 965816599}
   - component: {fileID: 965816598}
+  - component: {fileID: 965816601}
+  - component: {fileID: 965816600}
+  - component: {fileID: 965816602}
   m_Layer: 0
   m_Name: stickman
   m_TagString: Untagged
@@ -775,8 +590,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965816597}
-  m_LocalRotation: {x: -0.00871974, y: -0.00014469802, z: -0.016591392, w: 0.9998243}
-  m_LocalPosition: {x: 1.84, y: 3.26, z: -0.03}
+  m_LocalRotation: {x: -0.008720509, y: -0.00008686959, z: -0.023221396, w: 0.9996923}
+  m_LocalPosition: {x: 1.89, y: 3.35, z: -0.03}
   m_LocalScale: {x: 0.98255, y: 0.98255, z: 0.98255}
   m_Children:
   - {fileID: 2110153737}
@@ -787,7 +602,65 @@ Transform:
   - {fileID: 1549818925}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -0.9990001, y: 0, z: -1.9010001}
+  m_LocalEulerAnglesHint: {x: -0.9990001, y: 0.013, z: -2.661}
+--- !u!61 &965816600
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965816597}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &965816601
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965816597}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &965816602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965816597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!1 &1143232109
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1143232113}
   - component: {fileID: 1143232112}
-  - component: {fileID: 1143232111}
   - component: {fileID: 1143232110}
   m_Layer: 0
   m_Name: upper_right_leg
@@ -806,65 +678,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!144 &1143232110
-CharacterJoint:
+--- !u!114 &1143232110
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143232109}
-  m_ConnectedBody: {fileID: 730776034}
-  m_Anchor: {x: 0, y: 0.06128165, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09852852, y: 0.019318437, z: -0.07226983}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &1143232111
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1143232109}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &1143232112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1020,8 +846,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1158084702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.64, y: -3.39, z: 0}
-  m_LocalScale: {x: 18.127592, y: 5.1256843, z: 1}
+  m_LocalPosition: {x: 3.15, y: -3.39, z: 0}
+  m_LocalScale: {x: 43.414448, y: 5.433225, z: 1.06}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1035,6 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1436707816}
   - component: {fileID: 1436707817}
+  - component: {fileID: 1436707818}
   m_Layer: 0
   m_Name: lower_right_leg
   m_TagString: Untagged
@@ -1048,13 +875,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436707815}
-  m_LocalRotation: {x: -0.00000036600971, y: -0.0000013870884, z: -0.15966682, w: 0.987171}
+  m_LocalRotation: {x: 0.0000001313165, y: -0.000001429231, z: 0.18908417, w: 0.9819609}
   m_LocalPosition: {x: 0.36, y: -1.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1143232113}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.799002}
 --- !u!212 &1436707817
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1101,6 +928,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1436707818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436707815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!1 &1539699720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +950,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1539699721}
   - component: {fileID: 1539699724}
-  - component: {fileID: 1539699723}
   - component: {fileID: 1539699722}
   m_Layer: 0
   m_Name: lower_left_arm
@@ -1132,65 +971,19 @@ Transform:
   m_Father: {fileID: 398404462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.652}
---- !u!144 &1539699722
-CharacterJoint:
+--- !u!114 &1539699722
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1539699720}
-  m_ConnectedBody: {fileID: 398404459}
-  m_Anchor: {x: 0, y: 0.06650376, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.29214233, y: -0.9523628, z: -0.0038464956}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &1539699723
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1539699720}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &1539699724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1247,7 +1040,6 @@ GameObject:
   - component: {fileID: 1549818925}
   - component: {fileID: 1549818928}
   - component: {fileID: 1549818926}
-  - component: {fileID: 1549818927}
   m_Layer: 0
   m_Name: upper_right_arm
   m_TagString: Untagged
@@ -1261,73 +1053,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549818924}
-  m_LocalRotation: {x: -0.0085300775, y: -0.0018145462, z: -0.059818037, w: 0.9981712}
+  m_LocalRotation: {x: -0.008068067, y: -0.004840762, z: 0.05769932, w: 0.9982897}
   m_LocalPosition: {x: -2.77, y: -2.71, z: 0.08}
   m_LocalScale: {x: 0.98255, y: 0.9825499, z: 0.98255014}
   m_Children:
   - {fileID: 20710436}
   m_Father: {fileID: 965816599}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -0.98800004, y: -0.149, z: -6.8580003}
---- !u!54 &1549818926
-Rigidbody:
+  m_LocalEulerAnglesHint: {x: -0.89100003, y: -0.60700005, z: 6.6210003}
+--- !u!114 &1549818926
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1549818924}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!144 &1549818927
-CharacterJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1549818924}
-  m_ConnectedBody: {fileID: 730776034}
-  m_Anchor: {x: 0, y: 0.063892365, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09216689, y: 1.6413631, z: 0.049614064}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &1549818928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1384,7 +1130,6 @@ GameObject:
   - component: {fileID: 1874233029}
   - component: {fileID: 1874233032}
   - component: {fileID: 1874233030}
-  - component: {fileID: 1874233031}
   m_Layer: 0
   m_Name: upper_left_leg
   m_TagString: Untagged
@@ -1406,65 +1151,19 @@ Transform:
   m_Father: {fileID: 965816599}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.9990001, y: 0.033, z: 7.885}
---- !u!54 &1874233030
-Rigidbody:
+--- !u!114 &1874233030
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874233028}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!144 &1874233031
-CharacterJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1874233028}
-  m_ConnectedBody: {fileID: 730776034}
-  m_Anchor: {x: 0, y: 0.08300352, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.028336728, y: -0.019606609, z: -0.06792211}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &1874233032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1520,7 +1219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2110153737}
   - component: {fileID: 2110153740}
-  - component: {fileID: 2110153739}
   - component: {fileID: 2110153738}
   m_Layer: 0
   m_Name: head
@@ -1542,65 +1240,19 @@ Transform:
   m_Father: {fileID: 965816599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.044000003, y: -0.26700002, z: -3.4210002}
---- !u!144 &2110153738
-CharacterJoint:
+--- !u!114 &2110153738
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110153736}
-  m_ConnectedBody: {fileID: 730776034}
-  m_Anchor: {x: 0, y: 0.9603852, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0355646, y: 3.176972, z: 0.0016701394}
-  serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 1, z: 0}
-  m_TwistLimitSpring:
-    spring: 0
-    damper: 0
-  m_LowTwistLimit:
-    limit: -20
-    bounciness: 0
-    contactDistance: 0
-  m_HighTwistLimit:
-    limit: 70
-    bounciness: 0
-    contactDistance: 0
-  m_SwingLimitSpring:
-    spring: 0
-    damper: 0
-  m_Swing1Limit:
-    limit: 40
-    bounciness: 0
-    contactDistance: 0
-  m_Swing2Limit:
-    limit: 38.767
-    bounciness: 0
-    contactDistance: 0
-  m_EnableProjection: 0
-  m_ProjectionDistance: 0.1
-  m_ProjectionAngle: 180
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &2110153739
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2110153736}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9611f91e243e2944aad21ddc80a33410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movepower: 1
+  jumppower: 1
 --- !u!212 &2110153740
 SpriteRenderer:
   m_ObjectHideFlags: 0
