@@ -3,65 +3,72 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class stickman_move : MonoBehaviour {
-    Animator anim;
+
     public float movepower = 1f;
     public float jumppower = 1f;
     Rigidbody2D rigid;
     Vector3 movement;
+    Animator animator;
     bool isjumping = false;
 
 	
 	void Start () {
-        anim = transform.GetComponent<Animator>();
         rigid = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponentInChildren<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        if(Input.GetButtonDown ("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             isjumping = true;
         }
+        if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            animator.SetBool("ismoving", false);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0) 
+        {
+            animator.SetBool("ismoving", true);
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            animator.SetBool("ismoving", true);
+        }
 
-        float f = Input.GetAxis("Horizontal");
-        if (f < 0)
-        {
-            transform.parent.localScale=new Vector3 (-1, 1, 1);
-        }
-        else if (f>0)
-        {
-            transform.parent.localScale = new Vector3(1, 1, 1);
-        }
-        f = Mathf.Abs(f);
-        anim.SetFloat("speed", f);
-	}
-    private void FixedUpdate()
-    {
-        move();
-        jump();
     }
-    void move()
+    void FixedUpdate()
     {
-        Vector3 moveVelocity = Vector3.zero;
+        Move();
+        Jump();
+    }
+    void Move()
+    {
+        Vector3 movevelocity = Vector3.zero;
 
-        if (Input.GetAxisRaw("Horizontal")<0)
+        if (Input.GetAxisRaw ("Horizontal")<0)
         {
-            moveVelocity = Vector3.left;
+            movevelocity = Vector3.left;
+            transform.localScale= new Vector3 (-1, 1, 1);
         }
-        else if (Input.GetAxisRaw("Horizontal")>0)
+        else if (Input.GetAxisRaw ("Horizontal")>0)
         {
-            moveVelocity = Vector3.right;
+            movevelocity = Vector3.right;
+            transform.localScale = new Vector3(1, 1, 1);
         }
-        transform.position += moveVelocity * movepower * Time.deltaTime;
+        transform.position += movevelocity * movepower * Time.deltaTime;
     }
-    void jump()
+    void Jump()
     {
         if (!isjumping)
             return;
         rigid.velocity = Vector2.zero;
         Vector2 jumpvelocity = new Vector2(0, jumppower);
-        rigid.AddForce(jumpvelocity);
+        rigid.AddForce(jumpvelocity, ForceMode2D.Impulse);
         isjumping = false;
     }
+
+
+
 }
+
