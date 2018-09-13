@@ -8,11 +8,13 @@ public class stickman_move : MonoBehaviour {
     public float jumppower = 1f;
     Rigidbody2D rigid;
     Vector3 movement;
+    Animator animator;
     bool isjumping = false;
 
 	
 	void Start () {
         rigid = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponentInChildren<Animator>();
     }
 	
 	// Update is called once per frame
@@ -21,8 +23,20 @@ public class stickman_move : MonoBehaviour {
         {
             isjumping = true;
         }
-       
-	}
+        if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            animator.SetBool("ismoving", false);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0) 
+        {
+            animator.SetBool("ismoving", true);
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            animator.SetBool("ismoving", true);
+        }
+
+    }
     void FixedUpdate()
     {
         Move();
@@ -35,7 +49,7 @@ public class stickman_move : MonoBehaviour {
         if (Input.GetAxisRaw ("Horizontal")<0)
         {
             movevelocity = Vector3.left;
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale= new Vector3 (-1, 1, 1);
         }
         else if (Input.GetAxisRaw ("Horizontal")>0)
         {
