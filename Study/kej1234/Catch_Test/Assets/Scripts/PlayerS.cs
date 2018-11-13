@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Stickman_move : MonoBehaviour {
+public class PlayerS : MonoBehaviour {
 
     public CharacterController2D controller;
     public float runSpeed = 40f;
@@ -16,23 +15,19 @@ public class Stickman_move : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("isjumping", true);
+            animator.SetBool("isJumping", true);
         }
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
     }
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-       
+        jump = false;
+
+    }
+    public void Onlanding()
+    {
+        animator.SetBool("isJumping", false);
      
     }
-   public void Onlanding()
-    {
-        animator.SetBool("isjumping", false);
-        jump = false;
-    }
-   
-
-
 }
-

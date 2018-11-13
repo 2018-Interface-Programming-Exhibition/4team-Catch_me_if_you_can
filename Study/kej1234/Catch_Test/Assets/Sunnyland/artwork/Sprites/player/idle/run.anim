@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Run
+  m_Name: run
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -28,7 +28,7 @@ AnimationClip:
       value: {fileID: 21300000, guid: bc3fcf1d561104bea933686de6bade4b, type: 3}
     - time: 0.33333334
       value: {fileID: 21300000, guid: f58cc0961cc9146ca9780a0cb1327e5d, type: 3}
-    - time: 0.41666666
+    - time: 0.4166667
       value: {fileID: 21300000, guid: af314424f59d946469a97f398e8de53f, type: 3}
     attribute: m_Sprite
     path: 
