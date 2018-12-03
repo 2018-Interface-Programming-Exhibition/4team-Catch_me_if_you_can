@@ -11,7 +11,7 @@ public class time : MonoBehaviour {
     private void Update()
     {
         timecount += Time.deltaTime;
-        timelabel.text = string.Format("0:N2", timecount);
+        timelabel.text = string.Format("{0:f2}", timecount);
     }
     
 
