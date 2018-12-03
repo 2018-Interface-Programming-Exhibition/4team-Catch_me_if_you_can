@@ -7,7 +7,7 @@ public class MouseInfo : MonoBehaviour {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
 		pz.z = 0;
 		gameObject.transform.position = pz;
-        Debug.Log(pz.x);
+        Debug.Log(pz.y);
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {

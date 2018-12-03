@@ -31,7 +31,7 @@ public class PlayerS : MonoBehaviour {
 
             pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pz.z = 0;
-            pz.y += 2f;
+            pz.y = 5f;
 
             Invoke("teleport", 0.3f);
         }
@@ -70,9 +70,9 @@ public class PlayerS : MonoBehaviour {
         else if (Input.GetAxisRaw("Horizontal") < 0)
             tp.x -= 2f;
 
-        if (tp.x >= 5.07f) tp.x = 5.07f;
-        if (tp.x <= -9.07f) tp.x = -9.07f;
+        if (tp.x >= 5.07f) animator.SetFloat("Speed", 0);
+        if (tp.x <= -9.07f) animator.SetFloat("Speed", 0);
 
-        gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
+        //gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
     }
 }
