@@ -1844,7 +1844,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1595915468}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 01025f114895d1b4fa21054350255938, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1883,10 +1883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1595915472}
-  controller2: {fileID: 0}
   animator: {fileID: 1595915469}
-  animator2: {fileID: 0}
-  jumpCount: 2
   runSpeed: 60
 --- !u!61 &1595915476
 BoxCollider2D:
