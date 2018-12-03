@@ -15,6 +15,7 @@ public class PlayerInfo : MonoBehaviour {
 
      Vector3 pz;
      Vector3 tp;
+     Vector3 go;
 
      void Start()
      {
@@ -82,7 +83,14 @@ public class PlayerInfo : MonoBehaviour {
 		}
 
 		transform.position+=moveVelocity*movePower*Time.deltaTime;
-	}
+
+        go = gameObject.transform.position;
+
+        if (gameObject.transform.position.x >= 5.23f)
+            gameObject.transform.position = new Vector3(5.23f, go.y, go.z);
+        else if (gameObject.transform.position.x <= -9.12f)
+            gameObject.transform.position = new Vector3(-9.12f, go.y, go.z);
+    }
 
     void Jump()
     {
@@ -115,8 +123,8 @@ public class PlayerInfo : MonoBehaviour {
         else if (Input.GetAxisRaw("Horizontal") < 0)
             tp.x -= 2f;
 
-        if (tp.x >= 4.25f) tp.x = 5.23f;
-        if (tp.x <= -8.11f) tp.x = -9.12f;
+        if (tp.x >= 5.23f) tp.x = 5.23f;
+        if (tp.x <= -9.12f) tp.x = -9.12f;
 
         gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
     }
