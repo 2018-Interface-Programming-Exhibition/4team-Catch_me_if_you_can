@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseInfo : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
-		pz.z = 0; 
+		pz.z = 0;
 		gameObject.transform.position = pz;
 	}
 
