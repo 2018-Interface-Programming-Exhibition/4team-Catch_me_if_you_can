@@ -40,6 +40,8 @@ public class CharacterController2D : MonoBehaviour
     private bool m_wasCrouching = false;
     private bool candoublejump = false;
 
+    PlayerS pls;
+
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -49,6 +51,8 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+
+        pls = GameObject.Find("Player").GetComponent<PlayerS>();
     }
 
     private void FixedUpdate()
@@ -139,9 +143,11 @@ public class CharacterController2D : MonoBehaviour
         {
             if(m_Grounded)
             {
+                if (pls.congcong) m_JumpForce *= 0.5f;
                 //m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 candoublejump = true;
+                m_JumpForce = 400f;
             }
             else
             {

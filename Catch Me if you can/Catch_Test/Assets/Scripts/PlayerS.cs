@@ -12,6 +12,7 @@ public class PlayerS : MonoBehaviour {
 
     bool jump = false;
     bool tele = false;
+    public bool congcong = false;
 
     Vector3 pz;
     Vector3 tp;
@@ -42,6 +43,17 @@ public class PlayerS : MonoBehaviour {
             Invoke("teleport2", 0.1f);
         }
 
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            congcong = true;
+            jump = true;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            congcong = false;
+        }
+
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
     }
 
@@ -55,7 +67,8 @@ public class PlayerS : MonoBehaviour {
         else if (gameObject.transform.position.x <= -9.07f)
             gameObject.transform.position = new Vector3(-9.07f, go.y, go.z);
 
-        jump = false;
+        if(!congcong)
+            jump = false;
     }
 
     public void Onlanding() {
