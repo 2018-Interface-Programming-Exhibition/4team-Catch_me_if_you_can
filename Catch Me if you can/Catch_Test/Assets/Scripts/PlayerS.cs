@@ -70,16 +70,6 @@ public class PlayerS : MonoBehaviour {
 
         check = GameObject.Find("Player").GetComponent<CharacterController2D>();
 
-        go = gameObject.transform.position;
-        if (gameObject.transform.position.x >= 5.07f)
-            gameObject.transform.position = new Vector3(5.07f, go.y, go.z);
-
-        else if (gameObject.transform.position.x <= -9.07f)
-            gameObject.transform.position = new Vector3(-9.07f, go.y, go.z);
-
-        if (gameObject.transform.position.y >= 5.0f)
-            gameObject.transform.position = new Vector3(go.x, 5.0f, go.z);
-
         if (!congcong)
             jump = false;
     }
