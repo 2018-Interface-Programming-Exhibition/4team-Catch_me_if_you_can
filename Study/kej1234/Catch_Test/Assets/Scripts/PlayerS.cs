@@ -15,6 +15,7 @@ public class PlayerS : MonoBehaviour {
 
     Vector3 pz;
     Vector3 tp;
+    Vector3 go;
 
     void Update() {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -46,6 +47,14 @@ public class PlayerS : MonoBehaviour {
 
     void FixedUpdate() {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+
+        go = gameObject.transform.position;
+        if (gameObject.transform.position.x >= 5.07f)
+            gameObject.transform.position = new Vector3(5.07f, go.y, go.z);
+
+        else if (gameObject.transform.position.x <= -9.07f)
+            gameObject.transform.position = new Vector3(-9.07f, go.y, go.z);
+
         jump = false;
     }
 
@@ -70,9 +79,9 @@ public class PlayerS : MonoBehaviour {
         else if (Input.GetAxisRaw("Horizontal") < 0)
             tp.x -= 2f;
 
-        if (tp.x >= 5.07f) animator.SetFloat("Speed", 0);
-        if (tp.x <= -9.07f) animator.SetFloat("Speed", 0);
+        if (tp.x >= 5.07f) tp.x = 5.07f;
+        else if (tp.x <= -9.07f) tp.x = -9.07f;
 
-        //gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
+        gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
     }
 }

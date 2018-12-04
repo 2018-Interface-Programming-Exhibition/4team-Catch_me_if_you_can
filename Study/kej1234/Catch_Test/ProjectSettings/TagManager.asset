@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mouse
+  - Scaff
+  - Space
+  - Planet
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,13 @@ public class MouseInfo : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
 		pz.z = 0;
+
+        if (pz.y >= 5.0f) pz.y = 5.0f;
+
+        if (pz.x >= 5.07f) pz.x = 5.07f;
+        else if (pz.x <= -9.07f) pz.x = -9.07f;
+
 		gameObject.transform.position = pz;
-        Debug.Log(pz.y);
 	}
 
 

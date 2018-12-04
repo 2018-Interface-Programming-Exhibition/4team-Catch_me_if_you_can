@@ -9,6 +9,8 @@ public class PlayerS : MonoBehaviour {
 
     public float runSpeed = 40f;
     float horizontalMove = 0f;
+    float shootTimer = 0;
+    float shootDelay = 1.7f;
 
     bool jump = false;
     bool tele = false;
@@ -38,10 +40,12 @@ public class PlayerS : MonoBehaviour {
             Invoke("teleport", 0.3f);
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (shootTimer > shootDelay && Input.GetKeyDown(KeyCode.X))
         {
             Invoke("teleport2", 0.2f);
+            shootTimer = 0;
         }
+        shootTimer += Time.deltaTime;
 
         if(Input.GetKeyDown(KeyCode.V))
         {
