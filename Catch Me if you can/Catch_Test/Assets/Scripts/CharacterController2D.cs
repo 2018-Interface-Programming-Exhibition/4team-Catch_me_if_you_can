@@ -143,7 +143,7 @@ public class CharacterController2D : MonoBehaviour
         {
             if(m_Grounded)
             {
-                if (pls.congcong) m_JumpForce *= 1.7f;
+                if (pls.congcong) m_JumpForce *= 0.4f;
                 //m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 candoublejump = true;
