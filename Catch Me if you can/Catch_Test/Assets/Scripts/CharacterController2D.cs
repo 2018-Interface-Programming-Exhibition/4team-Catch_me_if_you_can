@@ -20,7 +20,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool m_Grounded;            // Whether or not the player is grounded.
+    public bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -143,11 +143,11 @@ public class CharacterController2D : MonoBehaviour
         {
             if(m_Grounded)
             {
-               // if (pls.congcong) m_JumpForce *= 0.5f;
+                if (pls.congcong) m_JumpForce *= 1.7f;
                 //m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 candoublejump = true;
-             //   m_JumpForce = 400f;
+                m_JumpForce = 400f;
             }
             else
             {

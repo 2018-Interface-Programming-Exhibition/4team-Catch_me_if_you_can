@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerS : MonoBehaviour {
 
     public CharacterController2D controller;
+    public CharacterController2D check;
     public Animator animator;
 
     public float runSpeed = 40f;
@@ -15,6 +16,7 @@ public class PlayerS : MonoBehaviour {
     bool jump = false;
     bool tele = false;
     public bool congcong = false;
+    bool grounded = false;
 
     Vector3 pz;
     Vector3 tp;
@@ -31,13 +33,16 @@ public class PlayerS : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            tele = true;
+            if (check.m_Grounded)
+            {
+                tele = true;
 
-            pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pz.z = 0;
-            pz.y = 5f;
+                pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                pz.z = 0;
+                pz.y = 5f;
 
-            Invoke("teleport", 0.3f);
+                Invoke("teleport", 0.3f);
+            }
         }
 
         if (shootTimer > shootDelay && Input.GetKeyDown(KeyCode.X))
@@ -63,6 +68,8 @@ public class PlayerS : MonoBehaviour {
     void FixedUpdate() {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 
+        check = GameObject.Find("Player").GetComponent<CharacterController2D>();
+
         go = gameObject.transform.position;
         if (gameObject.transform.position.x >= 5.07f)
             gameObject.transform.position = new Vector3(5.07f, go.y, go.z);
@@ -70,7 +77,10 @@ public class PlayerS : MonoBehaviour {
         else if (gameObject.transform.position.x <= -9.07f)
             gameObject.transform.position = new Vector3(-9.07f, go.y, go.z);
 
-        if(!congcong)
+        if (gameObject.transform.position.y >= 5.0f)
+            gameObject.transform.position = new Vector3(go.x, 5.0f, go.z);
+
+        if (!congcong)
             jump = false;
     }
 
@@ -95,11 +105,13 @@ public class PlayerS : MonoBehaviour {
             tp.x += 2f;
         else if (Input.GetAxisRaw("Horizontal") < 0)
             tp.x -= 2f;
-
-        if (Input.GetAxisRaw("Vertical") > 0)
-            tp.y += 2f;
-        else if (Input.GetAxisRaw("Vertical") < 0)
-            tp.y -= 2f;
+        if (check.m_Grounded)
+        {
+            if (Input.GetAxisRaw("Vertical") > 0)
+                tp.y += 2f;
+            else if (Input.GetAxisRaw("Vertical") < 0)
+                tp.y -= 2f;
+        }
 
         if (tp.x >= 5.07f) tp.x = 5.07f;
         else if (tp.x <= -9.07f) tp.x = -9.07f;
