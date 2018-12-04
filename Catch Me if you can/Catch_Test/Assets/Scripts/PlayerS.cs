@@ -40,18 +40,17 @@ public class PlayerS : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Invoke("teleport2", 0.1f);
+            Invoke("teleport2", 0.2f);
         }
 
         if(Input.GetKeyDown(KeyCode.V))
         {
-            congcong = true;
-            jump = true;
-        }
-
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            congcong = false;
+            if (congcong) congcong = false;
+            else
+            {
+                congcong = true;
+                jump = true;
+            }
         }
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -81,6 +80,7 @@ public class PlayerS : MonoBehaviour {
 
         gameObject.transform.position = new Vector3(pz.x, pz.y, pz.z);
         tele = false;
+        StartCoroutine("WaitATime");
     }
 
     void teleport2()
@@ -92,9 +92,24 @@ public class PlayerS : MonoBehaviour {
         else if (Input.GetAxisRaw("Horizontal") < 0)
             tp.x -= 2f;
 
+        if (Input.GetAxisRaw("Vertical") > 0)
+            tp.y += 2f;
+        else if (Input.GetAxisRaw("Vertical") < 0)
+            tp.y -= 2f;
+
         if (tp.x >= 5.07f) tp.x = 5.07f;
         else if (tp.x <= -9.07f) tp.x = -9.07f;
 
+        if (tp.y >= 5.0f) tp.y = 5.0f;
+        else if (tp.y <= -4.72f) tp.y = -4.72f;
+
         gameObject.transform.position = new Vector3(tp.x, tp.y, tp.z);
+
+        StartCoroutine("WaitATime");
+    }
+
+    IEnumerable WaitATime()
+    {
+        yield return new WaitForSeconds(3.0f);
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseInfo : MonoBehaviour {
+
 	void FixedUpdate () {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
 		pz.z = 0;
 		gameObject.transform.position = pz;
+        Debug.Log(pz.y);
 	}
 
 
@@ -15,17 +17,7 @@ public class MouseInfo : MonoBehaviour {
 			Debug.Log("Game Over");
 			GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
 		}
-        if (other.gameObject.CompareTag("Scaff"))
-        {
-            Debug.Log("Game Over");
-            GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
-        }
-        if (other.gameObject.CompareTag("Space"))
-        {
-            Debug.Log("Game Over");
-            GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
-        }
-        if (other.gameObject.CompareTag("Planet"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Game Over");
             GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
