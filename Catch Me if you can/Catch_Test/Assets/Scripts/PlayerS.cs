@@ -12,6 +12,7 @@ public class PlayerS : MonoBehaviour
     BirdMove bird;
     BirdMove2 bird2;
 
+
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     float telpoXTimer = 2.0f;
