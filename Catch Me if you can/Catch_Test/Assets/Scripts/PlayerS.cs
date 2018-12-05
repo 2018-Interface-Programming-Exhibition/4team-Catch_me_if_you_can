@@ -134,6 +134,7 @@ public class PlayerS : MonoBehaviour {
         yield return new WaitForSeconds(3.0f);
     }
 
+<<<<<<< HEAD
     void OnCollisionStay2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Bird"))
@@ -146,5 +147,10 @@ public class PlayerS : MonoBehaviour {
             if (Input.GetButtonDown("Jump"))
                 gameObject.transform.position = new Vector2(tp.x, tp.y + 0.7f);
         }
+=======
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+>>>>>>> abc55f99ae3f8326f4f7f8f0b5a0f0cf8f2ddf10
     }
 }
