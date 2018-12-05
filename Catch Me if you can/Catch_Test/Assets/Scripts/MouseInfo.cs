@@ -9,8 +9,6 @@ public class MouseInfo : MonoBehaviour {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
 		pz.z = 0;
 
-        Debug.Log(pz.x + ", " + pz.y);
-
         if (pz.y >= tmpy) pz.y = tmpy;
 
         if (pz.x >= tmpxplus) pz.x = tmpxplus;
