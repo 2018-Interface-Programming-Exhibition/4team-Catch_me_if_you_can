@@ -10,7 +10,7 @@ public class PlayerS : MonoBehaviour
     public Animator animator;
 
     BirdMove bird;
-    BirdMove bird2;
+    BirdMove2 bird2;
 
     public float runSpeed = 40f;
     float horizontalMove = 0f;
@@ -30,7 +30,7 @@ public class PlayerS : MonoBehaviour
     void Start()
     {
         bird = GameObject.Find("Bird1").GetComponent<BirdMove>();
-        bird2 = GameObject.Find("Bird2").GetComponent<BirdMove>();
+        bird2 = GameObject.Find("Bird2").GetComponent<BirdMove2>();
     }
 
     void Update()
