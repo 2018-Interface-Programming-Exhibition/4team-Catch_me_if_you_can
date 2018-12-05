@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 161494810}
   m_Layer: 0
   m_Name: "\uC2A4\uD14C\uC774\uC9C03 \uBC1C\uD310 (3)"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 359707114}
   m_Layer: 0
   m_Name: "\uC2A4\uD14C\uC774\uC9C03 \uBC1C\uD310 (5)"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 428204308}
   m_Layer: 0
   m_Name: "\uC6B0\uC8FC\uC120\uB2E4\uB978\uAC70"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 721954649}
   m_Layer: 0
   m_Name: "\uD589\uC131"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1548,7 +1548,7 @@ GameObject:
   - component: {fileID: 726530185}
   m_Layer: 0
   m_Name: st_3_star
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1701,7 +1701,7 @@ GameObject:
   - component: {fileID: 846227465}
   m_Layer: 0
   m_Name: "\uC2A4\uD14C\uC774\uC9C03 \uBC1C\uD310 (4)"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1809,7 +1809,7 @@ GameObject:
   - component: {fileID: 862317542}
   m_Layer: 0
   m_Name: "\uD654\uC131"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 1379138464}
   m_Layer: 0
   m_Name: "\uC6B0\uC8FC\uC120\uB610\uB2E4\uB978\uAC70"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2366,7 +2366,7 @@ GameObject:
   - component: {fileID: 1392037782}
   m_Layer: 0
   m_Name: "\uC2A4\uD14C\uC774\uC9C03 \uBC1C\uD310 (2)"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2785,7 +2785,7 @@ GameObject:
   - component: {fileID: 2073979227}
   m_Layer: 0
   m_Name: "\uC2A4\uD14C\uC774\uC9C03 \uBC1C\uD310 (1)"
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
