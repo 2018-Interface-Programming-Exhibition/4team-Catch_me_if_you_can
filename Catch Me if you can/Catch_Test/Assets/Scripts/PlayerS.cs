@@ -23,7 +23,6 @@ public class PlayerS : MonoBehaviour {
 
     Vector3 pz;
     Vector3 tp;
-    Vector3 go;
 
     void Update() {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));

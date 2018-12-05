@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseInfo : MonoBehaviour {
+    public float tmpy = 5.0f, tmpxplus = 5.0f, tmpxminus = -9.0f;
 
 	void FixedUpdate () {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
 		pz.z = 0;
 
-        if (pz.y >= 5.0f) pz.y = 5.0f;
+        Debug.Log(pz.x + ", " + pz.y);
 
-        if (pz.x >= 5.07f) pz.x = 5.07f;
-        else if (pz.x <= -9.07f) pz.x = -9.07f;
+        if (pz.y >= tmpy) pz.y = tmpy;
 
-		gameObject.transform.position = pz;
+        if (pz.x >= tmpxplus) pz.x = tmpxplus;
+        else if (pz.x <= tmpxminus) pz.x = tmpxminus;
+
+        gameObject.transform.position = pz;
 	}
 
 
