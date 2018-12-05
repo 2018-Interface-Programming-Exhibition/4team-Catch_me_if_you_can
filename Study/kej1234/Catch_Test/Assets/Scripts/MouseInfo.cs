@@ -5,14 +5,30 @@ using UnityEngine;
 public class MouseInfo : MonoBehaviour {
 	void FixedUpdate () {
 		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
-		pz.z = 0; 
+		pz.z = 0;
 		gameObject.transform.position = pz;
 	}
 
-	void OnCollisionEnter2D(Collision2D other) {
+
+    void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.CompareTag("Player")){
 			Debug.Log("Game Over");
 			GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
 		}
-	}
+        if (other.gameObject.CompareTag("Scaff"))
+        {
+            Debug.Log("Game Over");
+            GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
+        }
+        if (other.gameObject.CompareTag("Space"))
+        {
+            Debug.Log("Game Over");
+            GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
+        }
+        if (other.gameObject.CompareTag("Planet"))
+        {
+            Debug.Log("Game Over");
+            GameObject.Find("GameManager").GetComponent<Menu>().GameOver();
+        }
+    }
 }

@@ -124,8 +124,8 @@ GameObject:
   - component: {fileID: 124651581}
   - component: {fileID: 124651580}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310 (1)"
-  m_TagString: Untagged
+  m_Name: Scaff2
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124651579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.609, y: -3.73, z: 0}
+  m_LocalPosition: {x: 0.91, y: -3.81, z: 0}
   m_LocalScale: {x: 0.31080002, y: 1.007, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -404,8 +404,8 @@ GameObject:
   - component: {fileID: 515807172}
   - component: {fileID: 515807171}
   m_Layer: 0
-  m_Name: "\uD654\uC131"
-  m_TagString: Untagged
+  m_Name: Planet3
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -478,7 +478,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 515807170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.935, y: -2.234, z: 0}
+  m_LocalPosition: {x: -5.62, y: -1.99, z: 0}
   m_LocalScale: {x: 0.10636714, y: 0.13344735, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -495,8 +495,8 @@ GameObject:
   - component: {fileID: 539105589}
   - component: {fileID: 539105588}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310 (4)"
-  m_TagString: Untagged
+  m_Name: Scaff4
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,8 +596,8 @@ GameObject:
   - component: {fileID: 570519985}
   - component: {fileID: 570519984}
   m_Layer: 0
-  m_Name: "\uD654\uC131 (1)"
-  m_TagString: Untagged
+  m_Name: Planet4
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,8 +783,8 @@ GameObject:
   - component: {fileID: 744852191}
   - component: {fileID: 744852190}
   m_Layer: 0
-  m_Name: "\uD654\uC131 (3)"
-  m_TagString: Untagged
+  m_Name: Planet6
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,9 +801,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13134769}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.342166
+  m_Radius: 4.5
 --- !u!212 &744852191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -857,8 +857,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 744852189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.704, y: -2.411, z: 0}
-  m_LocalScale: {x: 0.10457927, y: 0.1319097, z: 1}
+  m_LocalPosition: {x: -0.851, y: -2.43, z: 0}
+  m_LocalScale: {x: 0.10980823, y: 0.10717663, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -926,20 +926,20 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.45056072, g: 0.7075472, b: 0.6911438, a: 0}
   m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 50, y: 50}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 35.770096
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.2
     width: 1
-    height: 1
+    height: 0.7
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 69.90001
   orthographic: 1
-  orthographic size: 5.406883
+  orthographic size: 5.406842
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -961,9 +961,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122314381}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -0.1, z: -10}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0.1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1054,8 +1054,8 @@ GameObject:
   - component: {fileID: 1231219418}
   - component: {fileID: 1231219420}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310"
-  m_TagString: Untagged
+  m_Name: Scaff1
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1113,7 +1113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231219417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.059, y: -3.84, z: 0}
+  m_LocalPosition: {x: -5.71, y: -4.03, z: 0}
   m_LocalScale: {x: 0.31080002, y: 1.007, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1131,7 +1131,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2036066, y: 0.054266926}
+  m_Offset: {x: 0.18560982, y: 0.068405464}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1142,7 +1142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.0636663, y: 0.19758034}
+  m_Size: {x: 4.9705973, y: 0.16302007}
   m_EdgeRadius: 0
 --- !u!1 &1296653710
 GameObject:
@@ -1155,8 +1155,8 @@ GameObject:
   - component: {fileID: 1296653712}
   - component: {fileID: 1296653711}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310 (5)"
-  m_TagString: Untagged
+  m_Name: Scaff6
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 1298483482}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1340,7 +1340,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1298483481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.119, y: -4.612, z: 0}
+  m_LocalPosition: {x: -0.119, y: -5.17, z: 0}
   m_LocalScale: {x: 4.7757196, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1356,9 +1356,10 @@ GameObject:
   - component: {fileID: 1393605710}
   - component: {fileID: 1393605709}
   - component: {fileID: 1393605708}
+  - component: {fileID: 1393605711}
   m_Layer: 0
-  m_Name: "\uC6B0\uC8FC\uC120\uB610\uB2E4\uB978\uAC70"
-  m_TagString: Untagged
+  m_Name: Space2
+  m_TagString: Space
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,6 +1455,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1393605711
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1393605707}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.43, y: 6.64}
+    newSize: {x: 14.43, y: 6.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
 --- !u!1 &1405506433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,8 +1491,8 @@ GameObject:
   - component: {fileID: 1405506435}
   - component: {fileID: 1405506434}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310 (2)"
-  m_TagString: Untagged
+  m_Name: Scaff3
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1726,7 +1752,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 81123c1859a247c4eace621894fd3060, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1808,7 +1834,7 @@ MonoBehaviour:
   m_JumpForce: 500
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1883,8 +1909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1595915472}
-  runSpeed: 60
   animator: {fileID: 1595915469}
+  runSpeed: 120
 --- !u!61 &1595915476
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1921,8 +1947,8 @@ GameObject:
   - component: {fileID: 1620894588}
   - component: {fileID: 1620894587}
   m_Layer: 0
-  m_Name: "\uD589\uC131"
-  m_TagString: Untagged
+  m_Name: Planet1
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2012,6 +2038,7 @@ GameObject:
   - component: {fileID: 1629454450}
   - component: {fileID: 1629454449}
   - component: {fileID: 1629454448}
+  - component: {fileID: 1629454452}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Mouse
@@ -2106,12 +2133,32 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629454447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.677, y: 0.248, z: 0}
+  m_LocalPosition: {x: 3, y: 4, z: 0}
   m_LocalScale: {x: 0.23310001, y: 0.3159966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1629454452
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629454447}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1640375727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,8 +2170,8 @@ GameObject:
   - component: {fileID: 1640375729}
   - component: {fileID: 1640375728}
   m_Layer: 0
-  m_Name: "\uD654\uC131 (2)"
-  m_TagString: Untagged
+  m_Name: Planet5
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2212,11 +2259,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1811443242}
   - component: {fileID: 1811443241}
-  - component: {fileID: 1811443243}
   - component: {fileID: 1811443244}
   m_Layer: 0
-  m_Name: "\uC6B0\uC8FC\uC120\uB2E4\uB978\uAC70"
-  m_TagString: Untagged
+  m_Name: Space1
+  m_TagString: Space
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2280,31 +2326,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1811443243
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1811443240}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.041042805, y: -0.24612033}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.24, y: 5.96}
-    newSize: {x: 19.24, y: 5.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 17.188015, y: 3.8269904}
-  m_EdgeRadius: 0
 --- !u!68 &1811443244
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2429,8 +2450,8 @@ GameObject:
   - component: {fileID: 1852309101}
   - component: {fileID: 1852309100}
   m_Layer: 0
-  m_Name: "\uBC1C\uD310 (3)"
-  m_TagString: Untagged
+  m_Name: Scaff5
+  m_TagString: Scaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2530,8 +2551,8 @@ GameObject:
   - component: {fileID: 2009260263}
   - component: {fileID: 2009260262}
   m_Layer: 0
-  m_Name: "\uD589\uC131 (1)"
-  m_TagString: Untagged
+  m_Name: Planet2
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2622,7 +2643,7 @@ GameObject:
   - component: {fileID: 2071939520}
   - component: {fileID: 2071939522}
   m_Layer: 5
-  m_Name: Text
+  m_Name: timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2697,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7987d3221d6d8418a2cda8bb1dc122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timelabel: {fileID: 0}
+  timelabel: {fileID: 2071939520}
   timecount: 0
 --- !u!1 &2077893484
 GameObject:
@@ -2733,8 +2754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.66}
+  m_SizeDelta: {x: 0, y: 0.017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077893486
 MonoBehaviour:
