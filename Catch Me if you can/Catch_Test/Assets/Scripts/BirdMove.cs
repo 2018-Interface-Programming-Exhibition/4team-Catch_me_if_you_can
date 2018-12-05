@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdMove : MonoBehaviour {
+public class BirdMove : MonoBehaviour
+{
 
     Vector2 bird;
     public float birdSpeed = -0.5f;
     public float x, y;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
         bird = gameObject.transform.position;
-        
+
         bird.x += birdSpeed;
 
         if (bird.x >= 1.08f)

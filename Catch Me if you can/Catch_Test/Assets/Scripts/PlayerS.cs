@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerS : MonoBehaviour {
+public class PlayerS : MonoBehaviour
+{
 
     public CharacterController2D controller;
     public CharacterController2D check;
     public Animator animator;
 
+    BirdMove bird;
+
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     float telpoXTimer = 2.0f;
-    float telpoXDelay= 1.7f;
+    float telpoXDelay = 1.7f;
     float telpoTimer = 2.0f;
     float telpoDelay = 1.7f;
 
@@ -23,7 +26,13 @@ public class PlayerS : MonoBehaviour {
     Vector3 pz;
     Vector3 tp;
 
-    void Update() {
+    void Start()
+    {
+        bird = GameObject.Find("st_1_bird1").GetComponent<BirdMove>();
+    }
+
+    void Update()
+    {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
@@ -53,7 +62,7 @@ public class PlayerS : MonoBehaviour {
             telpoXTimer = 0;
         }
 
-        if(Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             if (congcong) congcong = false;
             else
@@ -69,7 +78,8 @@ public class PlayerS : MonoBehaviour {
         telpoTimer += Time.deltaTime;
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 
         check = GameObject.Find("Player").GetComponent<CharacterController2D>();
@@ -78,7 +88,8 @@ public class PlayerS : MonoBehaviour {
             jump = false;
     }
 
-    public void Onlanding() {
+    public void Onlanding()
+    {
         animator.SetBool("isJumping", false);
     }
 
@@ -125,5 +136,20 @@ public class PlayerS : MonoBehaviour {
     IEnumerable WaitATime()
     {
         yield return new WaitForSeconds(3.0f);
+    }
+
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Bird"))
+        {
+            tp.x = bird.x;
+            tp.y = bird.y + 0.5f;
+
+            gameObject.transform.position = new Vector2(tp.x, tp.y);
+
+            if (Input.GetButtonDown("Jump"))
+                gameObject.transform.position = new Vector2(tp.x, tp.y + 0.7f);
+        }
     }
 }
