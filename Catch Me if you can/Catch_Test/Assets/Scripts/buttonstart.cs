@@ -14,7 +14,7 @@ public class buttonstart : MonoBehaviour {
 
     public void startgame()
     {
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("stage-1");
     }
 
 
