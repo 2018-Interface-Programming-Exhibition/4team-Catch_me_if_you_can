@@ -19,7 +19,6 @@ public class PlayerS : MonoBehaviour {
     bool tele = false;
     public bool congcong = false;
     bool grounded = false;
-    bool isright = false;
 
     Vector3 pz;
     Vector3 tp;
@@ -99,12 +98,10 @@ public class PlayerS : MonoBehaviour {
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             tp.x += 2f;
-            isright = true;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
             tp.x -= 2f;
-            isright = false;
         }
         if (check.m_Grounded)
         {

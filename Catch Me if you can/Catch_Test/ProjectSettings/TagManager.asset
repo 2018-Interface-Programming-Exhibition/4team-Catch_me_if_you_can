@@ -9,6 +9,7 @@ TagManager:
   - Space
   - Planet
   - Obstacle
+  - Bird
   layers:
   - Default
   - TransparentFX
