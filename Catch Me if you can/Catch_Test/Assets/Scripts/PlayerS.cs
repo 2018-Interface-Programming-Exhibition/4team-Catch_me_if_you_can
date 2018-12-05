@@ -10,6 +10,7 @@ public class PlayerS : MonoBehaviour
     public Animator animator;
 
     BirdMove bird;
+    BirdMove bird2;
 
     public float runSpeed = 40f;
     float horizontalMove = 0f;
@@ -28,7 +29,8 @@ public class PlayerS : MonoBehaviour
 
     void Start()
     {
-        bird = GameObject.Find("st_1_bird1").GetComponent<BirdMove>();
+        bird = GameObject.Find("Bird1").GetComponent<BirdMove>();
+        bird2 = GameObject.Find("Bird2").GetComponent<BirdMove>();
     }
 
     void Update()
@@ -145,6 +147,17 @@ public class PlayerS : MonoBehaviour
         {
             tp.x = bird.x;
             tp.y = bird.y + 0.5f;
+
+            gameObject.transform.position = new Vector2(tp.x, tp.y);
+
+            if (Input.GetButtonDown("Jump"))
+                gameObject.transform.position = new Vector2(tp.x, tp.y + 0.7f);
+        }
+
+        if(col.gameObject.CompareTag("Bird2"))
+        {
+            tp.x = bird2.x;
+            tp.y = bird2.y + 0.5f;
 
             gameObject.transform.position = new Vector2(tp.x, tp.y);
 

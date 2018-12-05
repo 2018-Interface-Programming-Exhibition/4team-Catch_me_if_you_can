@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class BirdMove : MonoBehaviour
 {
-
     Vector2 bird;
     public float birdSpeed = -0.5f;
+    public float maxx = 1.08f, minx = -8.81f;
     public float x, y;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -20,18 +15,18 @@ public class BirdMove : MonoBehaviour
 
         bird.x += birdSpeed;
 
-        if (bird.x >= 1.08f)
+        if (bird.x >= maxx)
         {
             birdSpeed *= -1;
-            bird.x = 1.08f;
+            bird.x = maxx;
 
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-        else if (bird.x <= -8.81f)
+        else if (bird.x <= minx)
         {
-            bird.x = -8.81f;
+            bird.x = minx;
             birdSpeed *= -1;
 
             Vector3 theScale = transform.localScale;
