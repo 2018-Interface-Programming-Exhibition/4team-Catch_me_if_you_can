@@ -18,7 +18,7 @@ public class time_1 : MonoBehaviour {
     {
         timecount += Time.deltaTime;
         timelabel.text = string.Format("{0:f2}", timecount);
-        if (timecount > 10)
+        if (timecount >= 60)
             stage_2();
     }
     
