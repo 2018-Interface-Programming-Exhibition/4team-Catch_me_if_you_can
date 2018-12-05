@@ -2310,8 +2310,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1995914334}
   - component: {fileID: 1995914337}
-  - component: {fileID: 1995914336}
   - component: {fileID: 1995914335}
+  - component: {fileID: 1995914336}
   m_Layer: 5
   m_Name: timer
   m_TagString: Untagged
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995914333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f7987d3221d6d8418a2cda8bb1dc122, type: 3}
+  m_Script: {fileID: 11500000, guid: 690a51c3aac75bc4cab1564f8abd4da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timelabel: {fileID: 1995914336}
