@@ -2940,6 +2940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1727621732}
+  check: {fileID: 0}
   animator: {fileID: 1727621733}
   runSpeed: 120
   congcong: 0
@@ -3009,6 +3010,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1365948556}
   m_CeilingCheck: {fileID: 1634137580}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3468,7 +3470,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.418869
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

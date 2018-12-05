@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 	GameObject GameOverMenu;
@@ -12,5 +13,5 @@ public class Menu : MonoBehaviour {
 	public void GameOver(){
 		Time.timeScale=0;
 		GameOverMenu.SetActive(true);
-	}
+    }
 }

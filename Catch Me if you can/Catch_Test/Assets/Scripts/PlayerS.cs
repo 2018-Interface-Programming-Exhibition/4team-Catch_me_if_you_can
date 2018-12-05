@@ -10,13 +10,16 @@ public class PlayerS : MonoBehaviour {
 
     public float runSpeed = 40f;
     float horizontalMove = 0f;
-    float shootTimer = 0;
-    float shootDelay = 1.7f;
+    float telpoXTimer = 2.0f;
+    float telpoXDelay= 1.7f;
+    float telpoTimer = 2.0f;
+    float telpoDelay = 1.7f;
 
     bool jump = false;
     bool tele = false;
     public bool congcong = false;
     bool grounded = false;
+    bool isright = false;
 
     Vector3 pz;
     Vector3 tp;
@@ -31,7 +34,7 @@ public class PlayerS : MonoBehaviour {
             animator.SetBool("isJumping", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (telpoTimer > telpoDelay && Input.GetKeyDown(KeyCode.C))
         {
             if (check.m_Grounded)
             {
@@ -42,15 +45,15 @@ public class PlayerS : MonoBehaviour {
                 pz.y = 5f;
 
                 Invoke("teleport", 0.3f);
+                telpoTimer = 0;
             }
         }
 
-        if (shootTimer > shootDelay && Input.GetKeyDown(KeyCode.X))
+        if (telpoXTimer > telpoXDelay && Input.GetKeyDown(KeyCode.X))
         {
             Invoke("teleport2", 0.2f);
-            shootTimer = 0;
+            telpoXTimer = 0;
         }
-        shootTimer += Time.deltaTime;
 
         if(Input.GetKeyDown(KeyCode.V))
         {
@@ -63,6 +66,9 @@ public class PlayerS : MonoBehaviour {
         }
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        telpoXTimer += Time.deltaTime;
+        telpoTimer += Time.deltaTime;
     }
 
     void FixedUpdate() {
@@ -92,9 +98,15 @@ public class PlayerS : MonoBehaviour {
         tp = gameObject.transform.position;
 
         if (Input.GetAxisRaw("Horizontal") > 0)
+        {
             tp.x += 2f;
+            isright = true;
+        }
         else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
             tp.x -= 2f;
+            isright = false;
+        }
         if (check.m_Grounded)
         {
             if (Input.GetAxisRaw("Vertical") > 0)
