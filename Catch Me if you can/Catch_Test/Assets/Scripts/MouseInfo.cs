@@ -6,7 +6,8 @@ public class MouseInfo : MonoBehaviour {
     public float tmpy = 5.0f, tmpxplus = 5.0f, tmpxminus = -9.0f;
 
 	void FixedUpdate () {
-		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition); 
+		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
 		pz.z = 0;
 
         if (pz.y >= tmpy) pz.y = tmpy;
