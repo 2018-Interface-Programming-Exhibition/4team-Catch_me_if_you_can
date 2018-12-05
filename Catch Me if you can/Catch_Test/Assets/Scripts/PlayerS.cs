@@ -126,4 +126,9 @@ public class PlayerS : MonoBehaviour {
     {
         yield return new WaitForSeconds(3.0f);
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+    }
 }
