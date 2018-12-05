@@ -8,6 +8,8 @@ public class PlayerS : MonoBehaviour {
     public CharacterController2D check;
     public Animator animator;
 
+    BirdMove bird;
+
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     float telpoXTimer = 2.0f;
@@ -22,6 +24,11 @@ public class PlayerS : MonoBehaviour {
 
     Vector3 pz;
     Vector3 tp;
+
+    void Start()
+    {
+        bird = GameObject.Find("st_1_bird1").GetComponent<BirdMove>();
+    }
 
     void Update() {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -125,5 +132,25 @@ public class PlayerS : MonoBehaviour {
     IEnumerable WaitATime()
     {
         yield return new WaitForSeconds(3.0f);
+    }
+
+<<<<<<< HEAD
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Bird"))
+        {
+            tp.x = bird.x;
+            tp.y = bird.y + 0.5f;
+
+            gameObject.transform.position = new Vector2(tp.x, tp.y);
+
+            if (Input.GetButtonDown("Jump"))
+                gameObject.transform.position = new Vector2(tp.x, tp.y + 0.7f);
+        }
+=======
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        
+>>>>>>> abc55f99ae3f8326f4f7f8f0b5a0f0cf8f2ddf10
     }
 }
