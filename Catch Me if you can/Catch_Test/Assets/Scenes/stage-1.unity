@@ -714,7 +714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133, y: 102.36}
+  m_AnchoredPosition: {x: 134.99998, y: 168.35002}
   m_SizeDelta: {x: 210, y: 63.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384416241
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpy: 5
-  tmpxplus: 8.8
+  tmpxplus: 5
   tmpxminus: -9
 --- !u!68 &1529552719
 EdgeCollider2D:
@@ -3138,7 +3138,7 @@ Transform:
   m_GameObject: {fileID: 1727621727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09, y: -3.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.770784, y: 0.9865414, z: 1}
   m_Children:
   - {fileID: 173312781}
   - {fileID: 1365948556}
@@ -3423,7 +3423,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1810320286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: 1.36, z: 0}
+  m_LocalPosition: {x: -3.8313856, y: 1.7059357, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
